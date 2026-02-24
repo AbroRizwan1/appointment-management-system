@@ -102,7 +102,7 @@ const App = () => {
             !isLogin ? (
               <Login setIsLogin={setIsLogin} loginData={loginData} />
             ) : (
-              <Dashboard setIsLogin={setIsLogin} />
+              <Dashboard setIsLogin={setIsLogin}  />
             )
           }
         />
