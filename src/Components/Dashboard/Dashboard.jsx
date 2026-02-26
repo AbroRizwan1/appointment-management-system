@@ -4,7 +4,6 @@ import Input from "../Input";
 import Button from "../Button";
 import * as XLSX from "xlsx";
 import { useNavigate } from "react-router-dom";
-import DashboardNav from "./DashboardNav";
 
 const Dashboard = ({ setIsLogin }) => {
   const [appointments, setAppointments] = useState([]);
@@ -139,8 +138,6 @@ const Dashboard = ({ setIsLogin }) => {
 
   return (
     <div className="bg-gray-100">
-      <DashboardNav setIsLogin={setIsLogin} />
-
       <div className="min-h-screen bg-gray-50 p-4 md:p-8">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between px-4 md:px-5 mt-5 mb-3 gap-4">
           {/* Heading */}

@@ -2,11 +2,10 @@ import React, { useEffect, useState } from "react";
 import HeadingText from "../HeadingText";
 import Input from "../Input";
 import Button from "../Button";
-import ValidateForm from "./ValidateForm";
 import { doctorsList } from "../DoctorsData";
 import validateForm from "./ValidateForm";
 import { useLocation, useNavigate } from "react-router-dom";
-import Navbar from "../Navbar";
+
 
 const AppointmentInputs = [
   {
@@ -81,7 +80,7 @@ const Appointment = ({ appointedDoc }) => {
   );
 
   const editData = location.state?.data;
-  
+
   // old Data filled to form when edit button click
   useEffect(() => {
     if (editData) {
@@ -123,7 +122,7 @@ const Appointment = ({ appointedDoc }) => {
     // ========== validation
     const validationErrors = validateForm(appointment);
     setErrors(validationErrors);
-    // ❗ agar errors hain → submit stop
+    // ❗ if get errory → submit stop
     if (Object.keys(validationErrors).length > 0) return;
 
     // // form fileds Reset
@@ -141,20 +140,21 @@ const Appointment = ({ appointedDoc }) => {
   return (
     <>
       <div className="xs:bg-red-600">
-        <div className="md:mt-50 md:mb-20 sm:my-20">
+        <div className="my-10 md:mt-44  sm:my-20">
           <HeadingText
             heading="Book An Appointment"
             text="Fill Out The Form Schedule Your Appointment"
           />
 
           <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-5">
-            {/* <p>Current editId: {editId ? editId : "No edit ID"}</p> */}
+          
             <form
               onSubmit={(e) => {
                 handleAppointment(e);
               }}
             >
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+           
                 {AppointmentInputs.map((elem, idx) => {
                   if (elem.id === "input") {
                     return (
@@ -191,7 +191,6 @@ const Appointment = ({ appointedDoc }) => {
                             SetAppointment((prev) => ({
                               ...prev,
                               [elem.name]: e.target.value,
-                              // [elem.name]: appointedDoc,
                               slot: "",
                             }));
                           }}

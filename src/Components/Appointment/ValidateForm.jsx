@@ -25,17 +25,16 @@ const validateForm = (appointment) => {
   }
 
   // // Date validation
-
   if (!appointment.date) {
     newErrors.date = "Date is required";
   } else {
     const selectedDate = new Date(appointment.date);
 
-    // Aaj ki date
+    // today's date with time set to 00:00:00 for accurate comparison
     const today = new Date();
     today.setHours(0, 0, 0, 0);
 
-    // Max date = Aaj se 1 saal baad
+    // max date is 1 year from today
     const maxDate = new Date();
     maxDate.setFullYear(maxDate.getFullYear() + 1);
     maxDate.setHours(0, 0, 0, 0);

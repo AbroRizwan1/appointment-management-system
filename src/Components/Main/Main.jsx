@@ -6,9 +6,9 @@ import StatsCard from "./StatsCard";
 const Main = () => {
   return (
     <>
-      <div className="bg-gray-50 md:mt-30 sm:mt-8">
+      <div className="mt-6 md:mt-30 sm:mt-8 ">
         <div
-          className="
+          className=" 
     bg-[linear-gradient(60deg,rgba(172,193,242,1)_10%,rgba(255,212,216,1)_80%,rgba(172,193,242,1)_100%)]
     mx-4 sm:mx-6 md:mx-10
     rounded-lg
