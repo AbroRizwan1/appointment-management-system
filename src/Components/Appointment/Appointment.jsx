@@ -6,7 +6,6 @@ import { doctorsList } from "../DoctorsData";
 import validateForm from "./ValidateForm";
 import { useLocation, useNavigate } from "react-router-dom";
 
-
 const AppointmentInputs = [
   {
     id: "input",
@@ -95,6 +94,12 @@ const Appointment = ({ appointedDoc }) => {
   const handleAppointment = (e) => {
     e.preventDefault(); // ⛔ STOP browser submit
 
+    // ========== validation
+    const validationErrors = validateForm(appointment);
+    setErrors(validationErrors);
+    // ❗ if get errory → submit stop
+    if (Object.keys(validationErrors).length > 0) return;
+
     const appointmentData =
       JSON.parse(localStorage.getItem("appointmentData")) || [];
 
@@ -119,12 +124,6 @@ const Appointment = ({ appointedDoc }) => {
     }
     alert(editData ? "Appointment Updated" : "Your Appointment has Submitted");
 
-    // ========== validation
-    const validationErrors = validateForm(appointment);
-    setErrors(validationErrors);
-    // ❗ if get errory → submit stop
-    if (Object.keys(validationErrors).length > 0) return;
-
     // // form fileds Reset
     SetAppointment((prev) => ({
       ...prev,
@@ -147,14 +146,12 @@ const Appointment = ({ appointedDoc }) => {
           />
 
           <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-5">
-          
             <form
               onSubmit={(e) => {
                 handleAppointment(e);
               }}
             >
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-           
                 {AppointmentInputs.map((elem, idx) => {
                   if (elem.id === "input") {
                     return (
@@ -164,6 +161,10 @@ const Appointment = ({ appointedDoc }) => {
                             SetAppointment((prev) => ({
                               ...prev,
                               [elem.name]: e.target.value,
+                            }));
+                            setErrors((prev) => ({
+                              ...prev,
+                              [elem.name]: "",
                             }));
                           }}
                           value={appointment?.[elem.name] || ""}
@@ -193,6 +194,10 @@ const Appointment = ({ appointedDoc }) => {
                               [elem.name]: e.target.value,
                               slot: "",
                             }));
+                            setErrors((prev) => ({
+                              ...prev,
+                              [elem.name]: "",
+                            }));
                           }}
                           type={`${elem.type}`}
                           label={`${elem.label}`}
@@ -214,6 +219,10 @@ const Appointment = ({ appointedDoc }) => {
                             SetAppointment((prev) => ({
                               ...prev,
                               [elem.name]: e.target.value,
+                            }));
+                            setErrors((prev) => ({
+                              ...prev,
+                              [elem.name]: "",
                             }));
                           }}
                           type={`${elem.type}`}
@@ -259,6 +268,7 @@ const Appointment = ({ appointedDoc }) => {
                             ...prev,
                             slot: slotObj.time,
                           }));
+                          
                         }}
                       >
                         {slotObj.time}

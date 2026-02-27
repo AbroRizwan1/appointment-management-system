@@ -38,11 +38,11 @@ const DashboardNav = ({ setIsLogin }) => {
         <li className="font-medium text-base sm:text-lg">
           <button
             className={`${
-              active === "login" ? "scale-105 text-blue-600" : ""
+              active === "dashboard" ? "scale-105 text-blue-600" : ""
             } transition duration-200`}
             onClick={() => {
-              setActive("login");
-              navigate("/login");
+              setActive("dashboard");
+              navigate("/dashboard");
             }}
           >
             Appointment
@@ -78,6 +78,7 @@ const DashboardNav = ({ setIsLogin }) => {
         onClick={() => {
           localStorage.removeItem("admin");
           setIsLogin(false);
+          navigate("/login");
         }}
       >
         Logout

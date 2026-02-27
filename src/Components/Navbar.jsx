@@ -105,7 +105,7 @@ const Navbar = ({
         </ul>
         <div>
           <Button
-            className=" sm:!px-4  sm:text-sm md:text-[base] lg:text-lg "
+            className=" sm:text-sm md:text-[base] lg:text-lg "
             text="Book appointment"
             onClick={() => navigate("/Appointment")}
           />

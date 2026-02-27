@@ -6,6 +6,7 @@ import Services from "./Services/Services";
 import ChooseMe from "./WhyChooseme/ChooseMe";
 import CTASection from "./CTS/CTASection";
 import QueryForm from "./QueryForm/QueryForm";
+import Navbar from "../Navbar";
 
 const Landing = ({
   homeref,
@@ -16,6 +17,15 @@ const Landing = ({
 }) => {
   return (
     <>
+    
+      <Navbar
+        // ScrollSection={ScrollSection}
+        // homeref={homeref}
+        // doctorsref={doctorsref}
+        // servicesref={servicesref}
+        // contactref={contactref}
+      />
+
       <div className="bg-gray-50">
         <section ref={homeref}>
           <Main id="main" />

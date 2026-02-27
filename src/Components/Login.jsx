@@ -4,8 +4,8 @@ import Button from "./Button";
 import { useNavigate } from "react-router-dom";
 
 export default function Login({ loginData }) {
-  const navigate = useNavigate();
 
+  const navigate = useNavigate();
   const [form, setform] = useState({
     email: "",
     password: "",

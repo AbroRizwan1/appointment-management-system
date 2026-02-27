@@ -1,6 +1,8 @@
 import { Trash2 } from "lucide-react";
 import { useState } from "react";
 const Query = ({ setIsLogin }) => {
+
+  
   const [allQueries, setAllQueries] = useState(() => {
     const savedData = localStorage.getItem("QUERY");
     return savedData ? JSON.parse(savedData) : [];
