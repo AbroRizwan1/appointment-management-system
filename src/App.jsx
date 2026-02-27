@@ -63,7 +63,6 @@ const App = () => {
           path="/"
           element={
             <Landing
-              setAppointedDoc={setAppointedDoc}
               doctorsref={doctorsref}
               servicesref={servicesref}
               contactref={contactref}

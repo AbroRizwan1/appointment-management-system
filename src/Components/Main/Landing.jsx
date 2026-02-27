@@ -14,16 +14,16 @@ const Landing = ({
   servicesref,
   contactref,
   setAppointedDoc,
+  ScrollSection,
 }) => {
   return (
     <>
-    
       <Navbar
-        // ScrollSection={ScrollSection}
-        // homeref={homeref}
-        // doctorsref={doctorsref}
-        // servicesref={servicesref}
-        // contactref={contactref}
+        ScrollSection={ScrollSection}
+        homeref={homeref}
+        doctorsref={doctorsref}
+        servicesref={servicesref}
+        contactref={contactref}
       />
 
       <div className="bg-gray-50">
