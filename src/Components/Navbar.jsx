@@ -10,6 +10,7 @@ import Button from "./Button";
 
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import logo from "../assets/Doctors/slotify.png";
 
 const Navbar = ({
   ScrollSection,
@@ -32,7 +33,7 @@ const Navbar = ({
           background: "#fff",
           width: "100%",
         }}
-        className="hidden md:flex items-center justify-between px-4 py-6 mb-1 bg-gray-50  shadow-xl "
+        className="hidden md:flex items-center justify-between lg:px-14 md:px-4 py-6 mb-1  bg-gray-50  shadow-xl "
       >
         <h1 className="lg:text-4xl lg:text-3xl md:text-2xl font-medium  text-gray-800">
           <button
@@ -41,7 +42,7 @@ const Navbar = ({
               navigate("/");
             }}
           >
-            MediSense
+            Slotify
           </button>
         </h1>
 
