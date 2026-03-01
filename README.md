@@ -3,7 +3,11 @@ This project demonstrates a complete frontend workflow including authentication,
 This project demonstrates a complete frontend workflow including authentication, dashboard management, form validation, WhatsApp integration, and Excel data export.
 
 Live Demo
-🔗[ Add your GitHub Pages / Live link here](https://abrorizwan1.github.io/appointment-management-system/)
+🔗(https://abrorizwan1.github.io/appointment-management-system/)
+
+Dashboard Login 
+Email: admin@12.com
+Password: admin123
 
 Project Overview
 This is a modern frontend web application where users can:
