@@ -4,7 +4,7 @@ import {
   HeartPulse,
   CalendarCheck,
 } from "lucide-react";
-import HeadingText from "../../HeadingText";
+import HeadingText from "../../../Components/HeadingText";
 
 const services = [
   {

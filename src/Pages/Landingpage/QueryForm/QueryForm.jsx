@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Button from "../../Button";
-import HeadingText from "../../HeadingText";
-import Input from "../../Input";
+import Button from "../../../Components/Button";
+import HeadingText from "../../../Components/HeadingText";
+import Input from "../../../Components/Input";
 import QueryValidation from "./QueryValidation";
 
 const Inputs = [
@@ -71,6 +71,7 @@ const QueryForm = () => {
     const newQuery = {
       id: Date.now(), // ✅ unique id
       ...formData,
+      seen: false,
     };
 
     //  Create updated array

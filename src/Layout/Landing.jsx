@@ -1,12 +1,11 @@
 import React, { useRef } from "react";
-// import Navbar from "../Navbar";
-import Main from "./Main";
-import DoctorsCard from "./DoctorsCard/DoctorsCard";
-import Services from "./Services/Services";
-import ChooseMe from "./WhyChooseme/ChooseMe";
-import CTASection from "./CTS/CTASection";
-import QueryForm from "./QueryForm/QueryForm";
-import Navbar from "../Navbar";
+import Main from "../Pages/Landingpage/HeroSection/Main";
+import DoctorsCard from "../Pages/Landingpage/DoctorsCard/DoctorsCard";
+import Services from "../Pages/Landingpage/Services/Services";
+import ChooseMe from "../Pages/Landingpage/WhyChooseme/ChooseMe";
+import CTASection from "../Pages/Landingpage/CTS/CTASection";
+import QueryForm from "../Pages/Landingpage/QueryForm/QueryForm";
+import Navbar from "../Components/Navbar";
 
 const Landing = ({
   homeref,
@@ -18,6 +17,7 @@ const Landing = ({
 }) => {
   return (
     <>
+      <h1>Hellow</h1>
       <Navbar
         ScrollSection={ScrollSection}
         homeref={homeref}

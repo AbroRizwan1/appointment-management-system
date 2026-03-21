@@ -1,3 +1,4 @@
+// import { CalendarCheck, LogIn, ArrowRight, Plus, Trash2 } from "lucide-react";
 import {
   Home,
   User,
@@ -113,133 +114,110 @@ const Navbar = ({
           <Button
             className=" sm:!px-3 sm:!py-2 sm:text-sm md:text-[base] ml-2 lg:text-lg "
             text="Login"
-            variant="outline"
+            variant="secondary"
+            icon={LogIn}
             onClick={() => navigate("/login")}
           />
         </div>
       </nav>
 
       {/* BOTTOM NAVBAR (Mobile) */}
-      <nav className="md:hidden fixed bottom-0 left-0 w-full shadow-lg bg-white  z-10">
-        <ul className="flex justify-around py-4 shadow-2xl text-sm mb-4 text-gray-600 rounded-xl mx-5 ">
-          <li
-            className={`flex flex-col items-center cursor-pointer transition-all ease-in-out duration-300 ${
-              active === "home"
-                ? "scale-108  text-indigo-600 font-semibold"
-                : ""
-            }`}
-          >
-            <button
-              onClick={() => {
-                setActive("home");
-                ScrollSection(homeref);
-                navigate("/");
-              }}
-            >
-              <Home
-                size={20}
-                className={active === "home" ? "stroke-[2.6]" : ""}
-              />
-            </button>
-            Home
-          </li>
-          <li
-            className={`flex flex-col items-center cursor-pointer transition-all ease-in-out duration-300 ${
-              active === "doctor"
-                ? "scale-108  text-indigo-600 font-semibold"
-                : ""
-            }`}
-          >
-            <button
-              onClick={() => {
-                setActive("doctor");
-                ScrollSection(doctorsref);
-              }}
-            >
-              <User
-                size={20}
-                className={active === "doctor" ? "stroke-[2.6]" : ""}
-              />
-            </button>
-            Doctors
-          </li>
 
-          <li
-            className={`flex flex-col items-center cursor-pointer transition-all ease-in-out duration-300 ${
-              active === "service"
-                ? "scale-108  text-indigo-600 font-semibold"
-                : ""
-            }`}
-          >
-            <button
-              onClick={() => {
-                setActive("service");
-                ScrollSection(servicesref);
-              }}
-            >
-              <Stethoscope
-                size={20}
-                className={active === "service" ? "stroke-[2.6]" : ""}
-              />
-            </button>
-            Services
-          </li>
+      <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 px-3 pb-3">
+        <div className="bg-white/90 backdrop-blur-md border border-gray-100 shadow-xl shadow-black/10 rounded-2xl px-2 py-2">
+          <ul className="flex justify-around items-center">
+            {[
+              {
+                key: "home",
+                icon: Home,
+                label: "Home",
+                action: () => {
+                  setActive("home");
+                  ScrollSection(homeref);
+                  navigate("/");
+                },
+              },
+              {
+                key: "doctor",
+                icon: User,
+                label: "Doctors",
+                action: () => {
+                  setActive("doctor");
+                  ScrollSection(doctorsref);
+                },
+              },
+              {
+                key: "service",
+                icon: Stethoscope,
+                label: "Services",
+                action: () => {
+                  setActive("service");
+                  ScrollSection(servicesref);
+                },
+              },
+              {
+                key: "contact",
+                icon: Phone,
+                label: "Contact",
+                action: () => {
+                  setActive("contact");
+                  ScrollSection(contactref);
+                },
+              },
+              {
+                key: "login",
+                icon: LogIn,
+                label: "Login",
+                action: () => navigate("/login"),
+                isLogin: true,
+              },
+            ].map(({ key, icon: Icon, label, action, isLogin }) => {
+              const isActive = active === key;
+              return (
+                <li key={key} className="flex-1">
+                  <button
+                    onClick={action}
+                    className={`
+                relative w-full flex flex-col items-center gap-0.5 py-1.5 px-1 rounded-xl
+                transition-all duration-200 active:scale-95
+                ${
+                  isLogin
+                    ? "text-blue-500"
+                    : isActive
+                      ? "text-blue-600"
+                      : "text-gray-400 hover:text-gray-600"
+                }
+              `}
+                  >
+                    {/* Active pill background */}
+                    {isActive && (
+                      <span className="absolute inset-0 bg-blue-50 rounded-xl" />
+                    )}
 
-          <li
-            className={`flex flex-col items-center cursor-pointer transition-all ease-in-out duration-300 ${
-              active === "contact"
-                ? "scale-108  text-indigo-600 font-semibold"
-                : ""
-            }`}
-          >
-            <button
-              onClick={() => {
-                setActive("contact");
-                ScrollSection(contactref);
-              }}
-            >
-              <Phone
-                size={20}
-                className={active === "contact" ? "stroke-[2.6]" : ""}
-              />
-            </button>
-            Contact
-          </li>
+                    {/* Icon */}
+                    <span className="relative">
+                      <Icon
+                        size={20}
+                        className={`transition-all duration-200 ${isActive ? "stroke-[2.5]" : "stroke-[1.8]"}`}
+                      />
+                      {/* Active dot */}
+                      {isActive && (
+                        <span className="absolute -top-0.5 -right-0.5 w-1.5 h-1.5 bg-blue-500 rounded-full" />
+                      )}
+                    </span>
 
-          <li
-            className={`flex flex-col   items-center cursor-pointer transition-all ease-in-out duration-300 ${
-              active === "appointment"
-                ? "scale-108  text-indigo-600 font-semibold"
-                : ""
-            }`}
-          >
-            <button
-              onClick={() => {
-                setActive("appointment");
-                ScrollSection(appointmentref);
-              }}
-            >
-              <CalendarCheck
-                size={20}
-                className={active === "appointment" ? "stroke-[2.6]" : ""}
-              />
-            </button>
-            Appointment
-          </li>
-
-          <li
-            className={`flex flex-col items-center cursor-pointer transition-all ease-in-out duration-300 `}
-          >
-            <button
-              onClick={() => {
-                navigate("/login");
-              }}
-            >
-              <LogIn size={20} />
-            </button>
-            Login
-          </li>
-        </ul>
+                    {/* Label */}
+                    <span
+                      className={`relative text-[10px] font-medium leading-none transition-all duration-200 ${isActive ? "font-semibold" : ""}`}
+                    >
+                      {label}
+                    </span>
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </nav>
     </>
   );

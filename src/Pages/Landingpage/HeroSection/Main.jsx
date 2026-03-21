@@ -1,7 +1,7 @@
 import React from "react";
-import Leftside from "./Leftside";
-import Rightside from "./Rightside";
-import StatsCard from "./StatsCard";
+import Leftside from "../HeroSection/Leftside";
+import Rightside from "../HeroSection/Rightside";
+import StatsCard from "../HeroSection/StatsCard";
 
 const Main = () => {
   return (

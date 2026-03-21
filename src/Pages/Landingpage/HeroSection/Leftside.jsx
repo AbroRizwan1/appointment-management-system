@@ -1,4 +1,4 @@
-import Button from "../Button";
+import Button from "../../../Components/Button";
 import { Routes, Route, Link, useNavigate } from "react-router-dom";
 import StatsCard from "./StatsCard";
 const Leftside = () => {

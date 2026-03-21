@@ -1,6 +1,6 @@
 import React from "react";
 
-import doctorImage from "../../assets/doctor.png";
+import doctorImage from "../../../assets/doctor.png";
 
 const Rightside = () => {
   return (

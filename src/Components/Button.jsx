@@ -5,13 +5,16 @@ const Button = ({
   type = "button",
   onClick,
   variant = "primary",
+  icon: Icon,
+  iconPosition = "left",
   className = "",
 }) => {
   const baseStyle =
-    "px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 " +
-    "text-sm sm:text-base font-medium rounded-full " +
+    "inline-flex items-center justify-center gap-2 " +
+    "px-4 py-2 sm:px-5 sm:py-2.5 " +
+    "text-sm sm:text-base font-medium rounded-xl " +
     "transition-all duration-300 ease-in-out " +
-    "active:scale-95 focus:outline-none cursor-pointer";
+    "active:scale-95 focus:outline-none cursor-pointer whitespace-nowrap";
 
   const variants = {
     primary: "bg-gray-800 text-white hover:bg-gray-700",
@@ -25,7 +28,13 @@ const Button = ({
       onClick={onClick}
       className={`${baseStyle} ${variants[variant]} ${className}`}
     >
-      {text}
+      {Icon && iconPosition === "left" && (
+        <Icon size={16} className="flex-shrink-0" />
+      )}
+      <span>{text}</span>
+      {Icon && iconPosition === "right" && (
+        <Icon size={16} className="flex-shrink-0" />
+      )}
     </button>
   );
 };

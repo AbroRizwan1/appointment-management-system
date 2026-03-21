@@ -1,10 +1,10 @@
-import five from "../../Button";
+import five from "../../../Components/Button";
 import React, { useEffect, useState } from "react";
-import Button from "../../Button";
+import Button from "../../../Components/Button";
 import { Heading } from "lucide-react";
-import HeadingText from "../../HeadingText";
-import Input from "../../Input";
-import { doctorsList } from "../../DoctorsData";
+import HeadingText from "../../../Components/HeadingText";
+import Input from "../../../Components/Input";
+import { doctorsList } from "../../../Components/DoctorsData";
 
 const DoctorsCard = ({ onselectDoctor }) => {
   const [selectFilter, setSelectFilter] = useState("all");

@@ -1,6 +1,6 @@
 import { ShieldCheck, Users, Clock, Heart } from "lucide-react";
 import whyImage from "../../../assets/chooseMe.avif";
-import HeadingText from "../../HeadingText";
+import HeadingText from "../../../Components/HeadingText";
 
 const features = [
   {

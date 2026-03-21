@@ -1,0 +1,14 @@
+
+commands: 
+
+npm install --save-dev gh-pages
+git init
+git add .  
+git status
+
+
+Package.json changes:
+"homepage": "https://AbroRizwan1.github.io/appointment-management-system"
+
+"predeploy": "npm run build",
+  "deploy": "gh-pages -d build" 

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import HeadingText from "../HeadingText";
-import Input from "../Input";
-import Button from "../Button";
-import { doctorsList } from "../DoctorsData";
+import HeadingText from "../../Components/HeadingText";
+import Input from "../../Components/Input";
+import Button from "../../Components/Button";
+import { doctorsList } from "../../Components/DoctorsData";
 import validateForm from "./ValidateForm";
 import { useLocation, useNavigate } from "react-router-dom";
 
@@ -105,22 +105,27 @@ const Appointment = ({ appointedDoc }) => {
 
     if (editData) {
       // EDIT CASE
-      const updatedData = appointmentData.map((item) =>
-        item.id === editData.id ? appointment : item,
+      const updated = AppointmentData.map((item) =>
+        item.id === editData.id ? { ...item, ...appointment } : item,
       );
-      localStorage.setItem("appointmentData", JSON.stringify(updatedData));
-      navigate("/login");
+
+      setAppointmentData(updated);
+      localStorage.setItem("appointmentData", JSON.stringify(updated));
+      navigate("/dashboard/appointments");
     } else {
       // ADD CASE
       const newAppointment = {
         ...appointment,
-        id: Date.now(), // only generate new id here
-        token: appointmentData.length + 1,
+        id: Date.now(),
+        token: AppointmentData.length + 1,
         status: "pending",
+        seen: false,
       };
 
-      appointmentData.push(newAppointment);
-      localStorage.setItem("appointmentData", JSON.stringify(appointmentData));
+      const updated = [...AppointmentData, newAppointment];
+
+      setAppointmentData(updated);
+      localStorage.setItem("appointmentData", JSON.stringify(updated));
     }
     alert(editData ? "Appointment Updated" : "Your Appointment has Submitted");
 
@@ -268,7 +273,6 @@ const Appointment = ({ appointedDoc }) => {
                             ...prev,
                             slot: slotObj.time,
                           }));
-                          
                         }}
                       >
                         {slotObj.time}
