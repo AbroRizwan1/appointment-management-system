@@ -16,7 +16,31 @@ import AppointmentCalendar from "./Pages/DashboardPages/AppointmentCalendar";
 import Setting from "./Pages/DashboardPages/Setting";
 
 const App = () => {
-  // ======= SideBar
+  //  ========== Default DATA
+
+  const defaultData = [
+    {
+      date: Date.now() + 1,
+      email: "default12@gmail.com",
+      id: 1772204681236,
+      name: "Default 1",
+      phone: "03365745616",
+      seen: true,
+      select: "Dr. John Doe",
+      slot: "2:30 AM",
+      status: "pending",
+      token: 1,
+    },
+  ];
+
+  useEffect(() => {
+    let data = JSON.parse(localStorage.getItem("appointmentData"));
+    if (!data) {
+      localStorage.setItem("appointmentData", JSON.stringify(defaultData));
+    } else {
+      console.log("data not found");
+    }
+  }, []);
 
   const navigate = useNavigate();
 

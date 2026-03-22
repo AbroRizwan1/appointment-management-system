@@ -40,7 +40,7 @@ const DashMain = () => {
         .length,
       cancelled: appointments.filter((apt) => apt.status === "cancelled")
         .length,
-      pending: appointments.filter((apt) => apt.status === "completed").length,
+      pending: appointments.filter((apt) => apt.status === "pending").length,
       total: appointments.length,
     };
     return objStatus;

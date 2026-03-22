@@ -52,6 +52,7 @@ const AppointmentInputs = [
     name: "select",
   },
 ];
+// localStorage.removeItem("appointmentData");
 
 const Appointment = ({ appointedDoc }) => {
   const location = useLocation();
@@ -72,6 +73,8 @@ const Appointment = ({ appointedDoc }) => {
     const savedData = localStorage.getItem("appointmentData");
     return savedData ? JSON.parse(savedData) : [];
   });
+
+
 
   // =========== doctor List
   const selectedDoctor = doctorsList.find(
