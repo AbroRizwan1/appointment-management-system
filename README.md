@@ -1,3 +1,12 @@
+### 🏠 Landing Page
+
+![Landing Page](./screenshots/landing_page.png)
+![Dashboard Page](./screenshots/Dashboard.png)
+![Login](./screenshots/login.png)
+![Table](./screenshots/Table.png)
+![appointment_page](./screenshots/appointment_page.png)
+![Calendar](./screenshots/Calendar_page.png)
+
 A fully responsive Appointment Booking and Management System built with React.js.
 This project demonstrates a complete frontend workflow including authentication, dashboard management, form validation, WhatsApp integration, and Excel data export.A fully responsive Appointment Booking and Management System built with React.js.
 This project demonstrates a complete frontend workflow including authentication, dashboard management, form validation, WhatsApp integration, and Excel data export.
@@ -102,9 +111,3 @@ Frontend Developer | React Developer
 
 📄 License
 This project is for educational and portfolio purposes.
-
-
-
-
-
-
