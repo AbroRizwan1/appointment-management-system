@@ -2,7 +2,7 @@
 
 ![Landing Page](./screenshots/landing_page.png)
 ![Dashboard Page](./screenshots/Dashboard.png)
-![Login](./screenshots/login.png)
+![Login](./screenshots/login_page.png)
 ![Table](./screenshots/Table.png)
 ![appointment_page](./screenshots/appointment_page.png)
 ![Calendar](./screenshots/Calendar_page.png)
