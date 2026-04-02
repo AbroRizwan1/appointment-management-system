@@ -11,4 +11,4 @@ Package.json changes:
 "homepage": "https://AbroRizwan1.github.io/appointment-management-system"
 
 "predeploy": "npm run build",
-  "deploy": "gh-pages -d build" 
+  "deploy": "gh-pages -d dist" 
