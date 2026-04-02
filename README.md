@@ -1,113 +1,105 @@
-### 🏠 Landing Page
+# 🗓️ Slotify — Appointment Booking & Management System
 
-![Landing Page](./screenshots/landing_page.png)
-![Dashboard Page](./screenshots/Dashboard.png)
-![Login](./screenshots/login_page.png)
-![Table](./screenshots/Table.png)
-![appointment_page](./screenshots/appointment_page.png)
-![Calendar](./screenshots/Calendar_page.png)
+A fully responsive appointment booking and management system built with React.js. Features a complete frontend workflow — authentication, dashboard analytics, CRUD operations, WhatsApp integration, and Excel export.
 
-A fully responsive Appointment Booking and Management System built with React.js.
-This project demonstrates a complete frontend workflow including authentication, dashboard management, form validation, WhatsApp integration, and Excel data export.A fully responsive Appointment Booking and Management System built with React.js.
-This project demonstrates a complete frontend workflow including authentication, dashboard management, form validation, WhatsApp integration, and Excel data export.
+🔗 [Live Demo](https://abrorizwan1.github.io/appointment-management-system/) · [GitHub](https://github.com/AbroRizwan1/appointment-managment-system)
 
-Live Demo
-🔗[ Add your GitHub Pages / Live link here](https://abrorizwan1.github.io/appointment-management-system/)
+---
 
-Project Overview
-This is a modern frontend web application where users can:
-Visit a fully responsive landing page
-Log in to access a dashboard
-Book appointments
-Submit queries
-Manage appointment records
-Export data to Excel
-Communicate via WhatsApp instantly
-The project focuses on clean UI, smooth user experience, and practical real-world functionality.
+## 📸 Screenshots
 
-Features
-🌐 Landing Page
-Fully responsive design
-Modern UI
-Smooth navigation
-Clean section-based layout
+| Landing Page | Dashboard |
+|---|---|
+| ![Landing](./screenshots/landing_page.png) | ![Dashboard](./screenshots/Dashboard.png) |
 
-🔐 Authentication
-Login functionality
-Protected dashboard routes
-Persistent login using localStorage
+| Login | Appointments |
+|---|---|
+| ![Login](./screenshots/login_page.png) | ![Appointments](./screenshots/appointment_page.png) |
 
-📊 Dashboard
-View all appointments
-View all queries
-Search functionality
-Data management system
+| Table | Calendar |
+|---|---|
+| ![Table](./screenshots/Table.png) | ![Calendar](./screenshots/Calendar_page.png) |
 
-📅 Appointment Management
-Add new appointments
-Edit appointments
-Delete appointments
-Undo delete option
-Confirm appointment
-Cancel appointment
-WhatsApp integration (auto-generated message on confirm/cancel)
+---
 
-Data Export
-Download appointments data in Excel (.xlsx) format
+## ✨ Features
 
-💬 WhatsApp Integration
-On confirm/cancel action, WhatsApp chat opens automatically
-Pre-filled custom message for quick communication
-Query Form
+**🌐 Landing Page**
+- Fully responsive modern UI
+- Smooth navigation & clean section layout
 
-Form validation
-Real-time input handling
-Clean data display in dashboard
+**🔐 Authentication**
+- Login with protected dashboard routes
+- Persistent session via LocalStorage
 
-🛠️ Tech Stack
-React.js
-React Router DOM
-JavaScript (ES6+)
-HTML5
-CSS3
-Tailwind CSS
-LocalStorage
-XLSX (Excel export)
-WhatsApp Web API (for direct chat redirection)
+**📊 Dashboard**
+- View appointments & queries
+- Search functionality & data management
 
-Installation
-Clone the repository:
-https://github.com/your-username/your-repo-name.git](https://github.com/AbroRizwan1/appointment-managment-system.git)
-Navigate to the project folder:
+**📅 Appointment Management**
+- Add, edit, delete & undo appointments
+- Confirm & cancel with status tracking
+- Auto-generated WhatsApp messages on confirm/cancel
+
+**📤 Data Export**
+- Download appointment data as Excel (.xlsx)
+
+**💬 WhatsApp Integration**
+- One-click WhatsApp chat with pre-filled message
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| React.js | UI & component architecture |
+| React Router DOM | Navigation & protected routes |
+| Tailwind CSS | Styling & responsive design |
+| XLSX | Excel export |
+| LocalStorage | Data persistence |
+| WhatsApp Web API | Direct chat redirection |
+
+---
+
+## 🚀 Getting Started
+
+### 1 — Clone the repo
+```bash
+git clone https://github.com/AbroRizwan1/appointment-managment-system.git
 cd appointment-managment-system
-Install dependencies:
+```
+
+### 2 — Install dependencies
+```bash
 npm install
-Run the development server:
-npm start
-Build for production:
+```
+
+### 3 — Run locally
+```bash
+npm run dev
+```
+
+### 4 — Build for production
+```bash
 npm run build
+```
 
-🎯 Key Learning Outcomes
-This project demonstrates:
-React routing & protected routes
-Authentication logic handling
-State management
-Form validation
-CRUD operations (frontend-based)
-Data export functionality
-Third-party integration (WhatsApp)
-Real-world dashboard UI implementation
+---
 
-📌 Future Improvements
-Backend integration (Node.js / PHP / Firebase)
-Role-based authentication
-Real-time database
-Admin panel enhancements
-API-based WhatsApp integration
+## 🎯 Key Highlights
 
-👨‍💻 Author
-Rizwan Abro
-Frontend Developer | React Developer
+- React routing with fully protected dashboard routes
+- Complete CRUD with undo delete functionality
+- Real-time form validation & state management
+- Excel export & WhatsApp integration
+- Professional dashboard UI with analytics charts
 
-📄 License
-This project is for educational and portfolio purposes.
+---
+
+## 👨‍💻 Author
+
+**Rizwan Abro** — Frontend Developer (React)
+
+## 📄 License
+Open source — for educational and portfolio purposes.
